@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="com.feixiaohao" platformBuildVersionCode="31" platformBuildVersionName="12">
+  <queries>
+    <package android:name="com.tencent.mm" />
+    <package android:name="com.tencent.mobileqq" />
+    <package android:name="com.sina.weibo" />
+    <package android:name="com.tencent.wework" />
+    <package android:name="com.qzone" />
+    <package android:name="com.alibaba.android.rimet" />
+    <package android:name="com.eg.android.AlipayGphone" />
+    <package android:name="com.instagram.android" />
+    <intent>
+      <action android:name="com.apptouch.intent.action.update_hms" />
+    </intent>
+    <intent>
+      <action android:name="com.huawei.appmarket.intent.action.AppDetail" />
+    </intent>
+    <package android:name="com.hisilicon.android.hiRMService" />
+    <intent>
+      <action android:name="com.huawei.hms.core.aidlservice" />
+    </intent>
+    <intent>
+      <action android:name="com.huawei.hms.core" />
+    </intent>
+  </queries>
+  <permission android:name="com.feixiaohao.permission.JPUSH_MESSAGE" android:protectionLevel="signature" />
+  <permission android:name="com.feixiaohao.permission.MIPUSH_RECEIVE" android:protectionLevel="signature" />
+  <permission android:name="com.feixiaohao.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+  <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
+  <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE" />
+  <uses-permission android:name="com.feixiaohao.permission.C2D_MESSAGE" />
+  <uses-permission android:name="com.feixiaohao.permission.MIPUSH_RECEIVE" />
+  <uses-permission android:name="com.feixiaohao.permission.JPUSH_MESSAGE" />
+  <uses-permission android:name="android.permission.FLASHLIGHT" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="MediaStore.Images.Media.INTERNAL_CONTENT_URI" />
+  <uses-permission android:name="MediaStore.Images.Media.EXTERNAL_CONTENT_URI" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+  <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+  <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+  <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+  <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+  <uses-permission android:name="android.permission.READ_LOGS" />
+  <uses-permission android:name="android.permission.FOREGROU,ND_SERVICE" />
+  <uses-permission android:name="android.permission.READ_CALENDAR" />
+  <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+  <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-feature android:name="android.hardware.camera" />
+  <uses-feature android:name="android.hardware.camera.autofocus" />
+  <permission android:name="com.feixiaohao.permission.PROCESS_PUSH_MSG" android:protectionLevel="signature" />
+  <permission android:name="com.feixiaohao.permission.PUSH_PROVIDER" android:protectionLevel="signature" />
+  <permission android:name="com.feixiaohao.permission.PUSH_WRITE_PROVIDER" android:protectionLevel="signature" />
+  <uses-permission android:name="com.feixiaohao.permission.PROCESS_PUSH_MSG" />
+  <uses-permission android:name="com.feixiaohao.permission.PUSH_PROVIDER" />
+  <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
+  <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.feixiaohao.FxhApp" android:persistent="true" android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+    <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default" />
+    <meta-data android:name="JPUSH_APPKEY" android:value="4978bdffe231c5cf4f33c094" />
+    <meta-data android:name="UMENG_APPKEY" android:value="64c8b398a1a164591b5ef31c" />
+    <meta-data android:name="UMENG_CHANNEL" android:value="fxh_wap" />
+    <provider android:authorities="com.feixiaohao.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" android:value="" />
+    </provider>
+    <receiver android:exported="true" android:name="cn.jpush.android.service.PluginXiaomiPlatformsReceiver">
+      <intent-filter>
+        <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.xiaomi.mipush.ERROR" />
+      </intent-filter>
+    </receiver>
+    <meta-data android:name="XIAOMI_APPKEY" android:value="MI-5211777899966" />
+    <meta-data android:name="XIAOMI_APPID" android:value="MI-2882303761517778966" />
+    <service android:enabled="true" android:exported="false" android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice" />
+    <service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice" android:exported="false" />
+    <service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler" />
+    <service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService" android:exported="false" />
+    <receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+      <intent-filter>
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </receiver>
+    <receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+      <intent-filter>
+        <action android:name="com.xiaomi.push.PING_TIMER" />
+      </intent-filter>
+    </receiver>
+    <meta-data android:name="com.huawei.hms.client.appid" android:value="100257785" />
+    <meta-data android:name="com.huawei.hms.client.cpid" android:value="1.0086001E16" />
+    <service android:exported="false" android:name="cn.jpush.android.service.PluginHuaweiPlatformsService">
+      <intent-filter>
+        <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
+    <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/jpush_notification_icon" android:value="" />
+    <service android:exported="false" android:name="cn.jpush.android.service.PluginFCMMessagingService">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
+    <meta-data android:name="com.vivo.push.api_key" android:value="b1b30c1c4ef99f862c7acb8467b6f96f" />
+    <meta-data android:name="com.vivo.push.app_id" android:value="100237140" />
+    <receiver android:exported="false" android:name="cn.jpush.android.service.PluginVivoMessageReceiver">
+      <intent-filter>
+        <action android:name="com.vivo.pushclient.action.RECEIVE" />
+      </intent-filter>
+    </receiver>
+    <service android:exported="true" android:name="com.vivo.push.sdk.service.CommandClientService" />
+    <activity android:exported="false" android:name="com.vivo.push.sdk.LinkProxyClientActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <activity android:exported="true" android:label="@string/app_name" android:name="com.feixiaohao.lunch.ui.LauncherActivity" android:screenOrientation="portrait" android:theme="@style/TranslucentTheme">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <intent-filter>
+        <data android:scheme="fxh" />
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+      </intent-filter>
+    </activity>
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.main.ui.MainActivity" android:screenOrientation="portrait" android:theme="@style/MainActivityTheme" android:windowSoftInputMode="adjustResize|stateVisible" />
+    <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.umeng.socialize.media.WBShareCallBackActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity" android:windowSoftInputMode="adjustResize" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.sina.weibo.sdk.share.WbShareTransActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.feixiaohao.wxapi.WXEntryActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <activity android:exported="true" android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true" android:screenOrientation="portrait">
+      <intent-filter>
+        <data android:scheme="tencent101517006" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <action android:name="android.intent.action.VIEW" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="tencent1106710302" />
+      </intent-filter>
+    </activity>
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="behind" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <activity android:excludeFromRecents="true" android:exported="false" android:name="com.umeng.socialize.editorpage.ShareActivity" android:screenOrientation="portrait" android:theme="@style/Theme.UMDefault" />
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.feixiaohao.common.share.ShareActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <service android:exported="false" android:name="com.feixiaohao.services.BackgroundService" />
+    <service android:exported="false" android:name="com.feixiaohao.services.BackgroundService$InnerService" />
+    <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:exported="false" android:name="com.tencent.bugly.beta.ui.BetaActivity" android:theme="@android:style/Theme.Translucent" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.mine.ui.SuggestActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" android:windowSoftInputMode="stateAlwaysVisible" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.mine.ui.SuggestActivityKt" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" android:windowSoftInputMode="stateAlwaysVisible" />
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.coincompose.tradesum.ui.SearchTradeAddActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.coincompose.tradesum.ui.WalletWriteActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" android:windowSoftInputMode="adjustResize" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.mine.ui.MyInformationActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.concept.ui.ConceptExampleActivityKt" android:screenOrientation="portrait" />
+    <receiver android:exported="false" android:name="com.feixiaohao.services.appwidget.MyAppWidgetProvider">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+        <action android:name="com.com.feixiaohao.widget.action.clickset" />
+        <action android:name="com.com.feixiaohao.widget.action.data.fetched" />
+        <action android:name="com.com.feixiaohao.widget.action.state.change" />
+        <action android:name="com.com.feixiaohao.widget.action.delayed.change" />
+        <action android:name="com.com.feixiaohao.widget.action.alarm.wakeup" />
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_info" android:value="" />
+    </receiver>
+    <service android:exported="false" android:name="com.feixiaohao.services.appwidget.MyWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS" />
+    <activity android:configChanges="keyboardHidden|orientation" android:exported="true" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:style/Theme.NoTitleBar">
+      <intent-filter>
+        <action android:name="cn.jpush.android.ui.PushActivity" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="com.feixiaohao" />
+      </intent-filter>
+    </activity>
+    <service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+      <intent-filter>
+        <action android:name="cn.jiguang.user.service.action" />
+        <action android:name="cn.jpush.android.intent.REGISTER" />
+        <action android:name="cn.jpush.android.intent.REPORT" />
+        <action android:name="cn.jpush.android.intent.PushService" />
+        <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+      </intent-filter>
+    </service>
+    <provider android:authorities="com.feixiaohao.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider" android:process=":pushcore" />
+    <service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+      <intent-filter>
+        <action android:name="cn.jpush.android.intent.DaemonService" />
+        <category android:name="com.feixiaohao" />
+      </intent-filter>
+    </service>
+    <provider android:authorities="com.feixiaohao.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider" />
+    <receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+      <intent-filter android:priority="1000">
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+        <category android:name="com.feixiaohao" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.USER_PRESENT" />
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.PACKAGE_ADDED" />
+        <action android:name="android.intent.action.PACKAGE_REMOVED" />
+        <data android:scheme="package" />
+      </intent-filter>
+    </receiver>
+    <receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver" />
+    <activity android:exported="true" android:name="cn.jpush.android.service.JNotifyActivity" android:taskAffinity="jpush.custom" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+      <intent-filter>
+        <action android:name="cn.jpush.android.intent.JNotifyActivity" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="com.feixiaohao" />
+      </intent-filter>
+    </activity>
+    <service android:enabled="true" android:exported="false" android:name="com.feixiaohao.jpush.PushService" android:process=":pushcore">
+      <intent-filter>
+        <action android:name="cn.jiguang.user.service.action" />
+      </intent-filter>
+    </service>
+    <receiver android:enabled="true" android:exported="false" android:name="com.feixiaohao.jpush.MyReceiver">
+      <intent-filter>
+        <action android:name="cn.jpush.android.intent.REGISTRATION" />
+        <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+        <action android:name="cn.jpush.android.intent.CONNECTION" />
+        <category android:name="com.feixiaohao" />
+      </intent-filter>
+    </receiver>
+    <receiver android:enabled="true" android:exported="false" android:name="com.feixiaohao.jpush.MyJPushMessageReceiver">
+      <intent-filter>
+        <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+        <category android:name="com.feixiaohao" />
+      </intent-filter>
+    </receiver>
+    <receiver android:exported="false" android:name="com.feixiaohao.common.utils.LoopRequestReceiver">
+      <intent-filter>
+        <action android:name="com.feixiaohao.common.utils.LoopRequestReceiver" />
+      </intent-filter>
+    </receiver>
+    <activity android:exported="false" android:name="com.feixiaohao.login.areaselet.ui.AreaCodeActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.price.ui.PriceActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.AboutActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.SettingActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.coincompose.ui.CoinComposeActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.coincompose.ui.CoinAssetActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.coincompose.ui.ComposeGuideActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.MyWalletActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.SettingFloatActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.search.ui.SearchActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+    <activity android:exported="false" android:name="com.feixiaohao.test.CFActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.test.TxtActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.LanguageActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.coincompose.tradesum.ui.TradeSumActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.coincompose.tradesum.ui.TradeAddActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.guide.activity.GuidePageActivity" android:screenOrientation="portrait" android:theme="@style/LaunchActivityTheme" android:windowSoftInputMode="adjustPan" />
+    <activity android:exported="false" android:name="com.feixiaohao.market.ui.ChannelManagerActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.coindetail.ui.CoinDetailActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.coindetail.ui.DetailKChartNewActivity" android:screenOrientation="landscape" android:theme="@style/DetailKChartActivity" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.coindetail.ui.DetailNewKChartActivity" android:screenOrientation="landscape" android:theme="@style/DetailKChartActivity" />
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.market.ui.ModifyFollowActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+    <activity android:exported="false" android:name="com.feixiaohao.concept.ui.ConceptActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.message.ui.MessageListActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.article.ui.ArticleDetailsActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.article.ui.ImageLookActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.coincompose.tradesum.ui.TradeModifyActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.FeedBackActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.SchoolActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.AboutFeixiaohaoActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.depth.calendar.activity.CalendarSinglePickActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.rank.ui.SingleRankActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.RiseNFallActivity" android:screenOrientation="portrait" />
+    <activity android:exported="true" android:name="com.feixiaohao.jpush.OpenClickActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity android:exported="false" android:name="com.feixiaohao.coindetail.InstitutionActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.coindetail.ui.OnlineExchangesActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.platform.platFormDetail.ui.ExchangeDescDetailActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.test.table.TableActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.MonitorActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.ModifyMonitorCoinActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.PriceNotificationActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.AddNotificationInfoActivity" android:windowSoftInputMode="stateAlwaysHidden" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.market.ui.MarketHorizontalActivity" android:screenOrientation="landscape" android:theme="@style/DetailKChartActivity" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.MarketChangeActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.CoinCompareMainActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.CoinCompareActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.SearchCompareCoinActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.PushModeSettingActivity" android:screenOrientation="portrait" />
+    <activity android:name="com.feixiaohao.test.ChartActivity" android:exported="false" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.HorizonCoinCompareActivity" android:screenOrientation="landscape" />
+    <activity android:exported="false" android:name="com.feixiaohao.coindetail.ui.WalletDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.Futures.FuturesDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.Futures.ui.SingleDepthActivity" android:screenOrientation="portrait" />
+    <activity android:configChanges="orientation|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.feixiaohao.login.ui.NewLoginActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" android:windowSoftInputMode="adjustResize|stateHidden" />
+    <activity android:exported="false" android:name="com.feixiaohao.contract.ui.ContractDetailsActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.ExchangeTransferActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.market.ui.ModifyGroupActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.depth.ui.StepDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.zoom.ui.PostActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.feixiaohao.zoom.ZoomDetailsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateHidden" />
+    <activity android:exported="false" android:name="com.feixiaohao.record.RecordAnalyseActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.zoom.ui.FollowAndFansActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.SecuritySettingActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.dex.ui.DexDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.dex.ui.MinerCoinActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateHidden" />
+    <activity android:exported="false" android:name="com.feixiaohao.dex.ui.DexVolumeDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.market.ui.StableCoinOnChainDetailsActivity" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.DiscoverLongShortDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.DiscoverContractHolderDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.BTContinuityRateActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.QRRActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.BTCVolumeActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.BTCFundFlowActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.BTContractBlowActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.BTCLongShortRatioActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.market.ui.DefiRateDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.market.ui.DefiMainCoinActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.market.ui.StakingProfitDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.Futures.FutureKlineDetailsActivity" android:screenOrientation="landscape" />
+    <activity android:exported="false" android:name="com.feixiaohao.notification.AddNotificationActivity2" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.notification.ChoosePairActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.notification.ChooseCoinActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.notification.ChooseExchangeActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.notification.AddQuickNotificationActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.statistics.QuantizationDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.statistics.TrendPanOptionActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.statistics.MarketReverseActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.statistics.FiltrationCoinActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.AppealActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.lunch.ui.GuideActivity" android:screenOrientation="portrait" android:theme="@style/LaunchActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.market.ui.AddMemoActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+    <activity android:exported="false" android:name="com.feixiaohao.notification.SelectedNotificationListActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.message.ui.MessageActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.notification.NotificationListActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.SettingPushActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.zoom.ui.AuthorHomePageActivityKt" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.zoom.ui.MyCollectionActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.dex.ui.DexStatisticsDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.zoom.ui.UpdateIntroductionActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.CoinIndexDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.discover.ui.UnUsualCoinActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.Futures.ui.FxhFutureActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.Futures.ui.OptionSummaryDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.concept.ui.ConceptActivityKt" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.platform.platFormDetail.ui.PlatformDetailsActivityKt" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.wallet.WalletDetailsActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.rank.ui.WalletRankActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.rank.ui.WalletFollowActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:hardwareAccelerated="true" android:name="com.feixiaohao.webview.WebViewActivity" android:screenOrientation="portrait" android:theme="@style/OtherActivityTheme" />
+    <activity android:exported="false" android:name="com.feixiaohao.market.ui.OptionHorizontalActivity" android:screenOrientation="landscape" />
+    <activity android:exported="false" android:name="com.feixiaohao.notification.NewAddNotificationActivity" />
+    <activity android:exported="false" android:name="com.feixiaohao.notification.MyCoinNotificationsActivity" />
+    <activity android:exported="false" android:name="com.feixiaohao.coindetail.ui.MoreAndNullActivity" android:screenOrientation="portrait" />
+    <activity android:exported="false" android:name="com.feixiaohao.mine.ui.NetWorkSwitchActivity" android:screenOrientation="portrait" />
+    <service android:exported="false" android:name="com.feixiaohao.services.Countservice" />
+    <activity android:configChanges="keyboardHidden|navigation|orientation" android:exported="false" android:name="com.tencent.captchasdk.TCaptchaPopupActivity" android:theme="@style/TCaptchaPopupDialogActivity" />
+    <activity android:name="net.arvin.selector.uis.SelectorActivity" android:screenOrientation="portrait" android:theme="@style/TransparentTheme" android:exported="false" />
+    <provider android:authorities="com.feixiaohao.AgentWebFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.just.agentweb.AgentWebFileProvider">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/web_files_public" android:value="" />
+    </provider>
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="standard" android:name="com.just.agentweb.ActionActivity" android:theme="@style/actionActivity" android:windowSoftInputMode="stateAlwaysHidden" />
+    <provider android:authorities="com.feixiaohao.DownloadFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.download.library.DownloadFileProvider">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/download_files_public" android:value="" />
+    </provider>
+    <receiver android:exported="false" android:name="com.download.library.NotificationCancelReceiver" />
+    <receiver android:directBootAware="true" android:exported="true" android:name="com.huawei.hms.support.api.push.PushMsgReceiver" android:permission="com.feixiaohao.permission.PROCESS_PUSH_MSG">
+      <intent-filter>
+        <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY" />
+        <action android:name="com.huawei.intent.action.PUSH" />
+      </intent-filter>
+    </receiver>
+    <receiver android:directBootAware="true" android:exported="true" android:name="com.huawei.hms.support.api.push.PushReceiver" android:permission="com.feixiaohao.permission.PROCESS_PUSH_MSG">
+      <intent-filter>
+        <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+        <action android:name="com.huawei.android.push.intent.RECEIVE" />
+      </intent-filter>
+    </receiver>
+    <service android:directBootAware="true" android:enabled="true" android:exported="true" android:name="com.huawei.hms.support.api.push.service.HmsMsgService" android:process=":pushservice">
+      <intent-filter>
+        <action android:name="com.huawei.push.msg.NOTIFY_MSG" />
+        <action android:name="com.huawei.push.msg.PASSBY_MSG" />
+      </intent-filter>
+    </service>
+    <provider android:authorities="com.feixiaohao.huawei.push.provider" android:exported="true" android:name="com.huawei.hms.support.api.push.PushProvider" android:permission="com.feixiaohao.permission.PUSH_PROVIDER" android:readPermission="com.feixiaohao.permission.PUSH_PROVIDER" android:writePermission="com.feixiaohao.permission.PUSH_WRITE_PROVIDER" />
+    <meta-data android:name="com.huawei.hms.client.service.name:push" android:value="push:6.1.0.300" />
+    <meta-data android:name="com.huawei.hms.min_api_level:push:push" android:value="1" />
+    <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule" />
+    <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.sina.weibo.sdk.web.WebActivity" android:windowSoftInputMode="adjustResize" />
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:launchMode="singleTask" android:name="com.sina.weibo.sdk.share.ShareTransActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+      <intent-filter>
+        <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <provider android:authorities="com.feixiaohao.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.sina.weibo.sdk.content.FileProvider">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths" android:value="" />
+    </provider>
+    <activity android:exported="false" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@style/EasyPermissions.Transparent" />
+    <provider android:authorities="com.feixiaohao.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" />
+    <provider android:authorities="com.feixiaohao.aaidinitprovider" android:exported="false" android:initOrder="500" android:name="com.huawei.hms.aaid.InitProvider" />
+    <meta-data android:name="com.huawei.hms.client.service.name:opendevice" android:value="opendevice:5.1.1.307" />
+    <meta-data android:name="com.huawei.hms.min_api_level:opendevice:push" android:value="1" />
+    <meta-data android:name="com.huawei.hms.client.service.name:base" android:value="base:6.1.0.302" />
+    <meta-data android:name="com.huawei.hms.min_api_level:base:hmscore" android:value="1" />
+    <meta-data android:name="availableLoaded" android:value="yes" />
+    <provider android:authorities="com.feixiaohao.hms.update.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.hms.update.provider.UpdateProvider" />
+    <provider android:authorities="com.feixiaohao.hms.device.validate.spoofprovider" android:exported="false" android:grantUriPermissions="false" android:name="com.huawei.hms.device.provider.CheckHmsProvider" />
+    <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar" />
+    </activity>
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent" />
+    </activity>
+    <provider android:authorities="com.feixiaohao.updateSdk.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider" />
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />
+    <activity android:configChanges="fontScale|layoutDirection|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.hms.activity.BridgeActivity" android:screenOrientation="behind" android:theme="@style/Base_Translucent">
+      <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent" />
+    </activity>
+    <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="com.huawei.hms.activity.EnableServiceActivity" />
+    <provider android:authorities="com.feixiaohao.AGCInitializeProvider" android:exported="false" android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider" />
+    <service android:exported="false" android:name="com.huawei.agconnect.core.ServiceDiscovery" />
+  </application>
+  
+  <uses-permission android:name="android.permission.ACCESSIBILITY_SERVICE" />
+</manifest>
